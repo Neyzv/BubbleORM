@@ -11,7 +11,6 @@ use BubbleORM\Exceptions\IncorrectDefaultValueTypeException;
 use BubbleORM\Exceptions\InvalidUnsignedForTypeException;
 use BubbleORM\Exceptions\NotInitializedProperty;
 use ReflectionProperty;
-use ReflectionType;
 
 class DatabaseColumn{
     private string $name;
