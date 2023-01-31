@@ -14,7 +14,6 @@ use ReflectionProperty;
 use ReflectionType;
 
 class DatabaseColumn{
-    private ReflectionType $type;
     private string $name;
     private string $dbName;
     private string $typeName;

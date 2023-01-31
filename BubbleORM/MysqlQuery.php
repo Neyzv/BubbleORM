@@ -18,7 +18,6 @@ class MysqlQuery
         $this->result = null;
         $this->conditions = [];
         $this->orderFuncs = [];
-        $this->properties = [];
 
         if(!ModelInformationsCache::tryGetModelInformations($this->class, $this->modelInfos))
             $this->modelInfos = ModelInformationsCache::tryRegisterModelInformations($this->class);
