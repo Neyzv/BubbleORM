@@ -93,7 +93,13 @@ class DatabaseAccessor{
     }
 
     public function execute(string $request, array $params = []) : PDOStatement{
-        $req = $this->db->prepare($this->buildModelsSQLScript() . $request);
+        $preRequest = $this->buildModelsSQLScript();
+        if(!empty($preRequest)){
+            $req = $this->db->prepare($preRequest);
+            $req->execute();
+        }
+        
+        $req = $this->db->prepare($request);
         $req->execute($params);
 
         return $req;
